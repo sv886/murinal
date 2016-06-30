@@ -1,3 +1,19 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.index_container {
+  display: flex;
+  flex-direction: column;
+  .murinal_image {
+    border-radius: 4px;
+    border: 2px solid black;
+  }
+  .murinal_desc {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+  }
+}
