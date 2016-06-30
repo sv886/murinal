@@ -1,4 +1,4 @@
-* Welcome to Murinal
+# Welcome to Murinal
 
 *The web app for fine art connoisseurs.*
 
