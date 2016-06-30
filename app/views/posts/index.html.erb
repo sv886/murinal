@@ -1,2 +1,12 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>Latest Murinals</h1>
+<div class="index_container">
+  <% @posts.each do |post| %>
+    <div class="murinal_image">
+      <%= image_tag attachment_url(post, :photo, :fill, 300, 300, format: "jpg") %>
+    </div>
+    <div class="murinal_desc">
+      <h1> <%= post.description %></h1>
+      <h2> - <%= time_ago_in_words(post.created_at) %> ago</h2>
+    </div>
+  <% end %>
+</div>
