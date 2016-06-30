@@ -45,3 +45,10 @@ group :development do
   gem 'spring'
 end
 
+gem 'font-awesome-sass'
+gem 'refile', '0.6.2', require: 'refile/rails'
+gem 'refile-mini_magick'
+gem 'refile-postgres', '1.2'
+gem 'rails-erd'
+gem 'simple_form'
+# gem 'devise'
