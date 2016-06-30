@@ -74,6 +74,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    materialize-sass (0.97.6)
+      sass (~> 3.3)
     mime-types (2.99.2)
     mini_magick (4.5.1)
     mini_portile2 (2.1.0)
@@ -189,6 +191,7 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
+  materialize-sass
   pg (~> 0.15)
   rails (= 4.2.5.2)
   rails-erd
