@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
 
-  attachment :photo
+  belongs_to :user
+
   validates :photo, presence: true
-  
+  attachment :photo
+
 end
