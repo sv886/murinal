@@ -1,18 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'users/show'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/destroy'
-
-  root 'posts#index'
+  resources :users, except: :index
 
   resources :posts
 
