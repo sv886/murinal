@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
-  devise_for :users, except: :index
   resources :posts, except: :index
 
   # The priority is based upon order of creation: first created -> highest priority.
