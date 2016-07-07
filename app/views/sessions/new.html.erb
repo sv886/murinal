@@ -1,2 +1,9 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1>Login Here!</h1>
+<%= simple_form_for :sessions, :url => login_path, :html => { :class => 'form-vertical' } do |f| %>
+  <%= f.input :username, :required =>false, :label => '', :placeholder => 'Username' %>
+  <%= f.input :password, :required =>false, :label => '', :placeholder => '********' %>
+  <div class="buttons">
+    <%= f.submit "Sign in", class: "btn btn-lg btn-primary" %>
+    <%= link_to "Register", new_user_path, class: "btn btn-lg btn-default" %>
+  </div>
+<% end %>
