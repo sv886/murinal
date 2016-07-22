@@ -1,9 +1,19 @@
 <h1>Login Here!</h1>
-<%= simple_form_for :sessions, :url => login_path, :html => { :class => 'form-vertical' } do |f| %>
-  <%= f.input :username, :required =>false, :label => '', :placeholder => 'Username' %>
-  <%= f.input :password, :required =>false, :label => '', :placeholder => '********' %>
-  <div class="buttons">
-    <%= f.submit "Sign in", class: "btn btn-lg btn-primary" %>
-    <%= link_to "Register", new_user_path, class: "btn btn-lg btn-default" %>
+
+<div class="form">
+    <%= form_tag do %>
+      <div class="">
+        <%= label_tag :username %>
+        <%= text_field_tag :username %>
+      </div>
+      <div class="">
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+      </div>
+      <div class="session_buttons">
+        <%= submit_tag "Sign in", class: "btn btn-lg btn-primary" %>
+        <%= link_to "Register", new_user_path, class: "btn btn-lg btn-default" %>
+      </div>
   </div>
+
 <% end %>
