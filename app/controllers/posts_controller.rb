@@ -1,4 +1,9 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, :except => [:index, :show]
+
+  before_action do
+    @current_user = current_user
+  end
 
   def index
     @posts = Post.all

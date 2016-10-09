@@ -8,19 +8,22 @@
   </head>
   <body>
     <nav>
-    <div class="nav-wrapper">
-      <%= link_to "Murinal", root_path, :class => "brand-logo" %>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <% if @current_user %>
-          <li><%= link_to "New Murinal", new_post_path %></li>
-          <li><%= link_to "Logout", "#" %></li>
-        <% else %>
-          <li><%= link_to "Sign Up", "#" %></li>
-          <li><%= link_to "Sign In", "#" %></li>
-        <% end %>
-      </ul>
-    </div>
-  </nav>
+      <div class="nav-wrapper">
+        <%= link_to "Murinal", root_path, :class => "brand-logo" %>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if @current_user %>
+            <li><%= link_to "New Murinal", new_post_path %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, :method => 'delete' %></li>
+          <% else %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <div class="container">
       <%= yield %>
