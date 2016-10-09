@@ -1,9 +1,0 @@
-<h1>Register Here</h1>
-
-<%= simple_form_for @user do |f| %>
-  <%= f.input :email, :required => false, :placeholder => 'email@address.com' %>
-  <%= f.input :username, :required => false, :placeholder => 'Enter your handle here' %>
-  <%= f.input :password, :required => false, :placeholder => '********' %>
-  <%= f.input :password_confirmation, :required => false, :placeholder => '********' %>
-  <%= f.submit "Register", class: "waves-effect waves-light btn" %>
-<% end %>
