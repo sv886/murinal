@@ -6,6 +6,9 @@
 
 # Ignore bundler config.
 /.bundle
+vendor/bundle
+open
+.bash_profile.save
 
 # Ignore all logfiles and tempfiles.
 /log/*
